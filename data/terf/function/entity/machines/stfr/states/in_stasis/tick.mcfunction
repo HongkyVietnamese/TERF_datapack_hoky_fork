@@ -15,6 +15,7 @@ scoreboard players set shield_status terf_states 4
 scoreboard players add @s terf_data_V 500
 data modify storage terf:temp displays.group_main[].color set value "red"
 function terf:entity/machines/stfr/visuals/stabilizer/stabilizer_power_beam_tick
+function terf:entity/machines/stfr/visuals/stabilizer/stabilizer_shield_beam_tick
 function terf:entity/machines/stfr/visuals/stabilizer/rod_animation_step
 function terf:entity/machines/stfr/visuals/stabilizer/rod_animation_step
 function terf:entity/machines/stfr/visuals/stabilizer/rotation/rotate_stabilizers with entity @s data.terf
