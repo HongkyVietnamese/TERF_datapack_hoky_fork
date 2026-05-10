@@ -12,7 +12,7 @@ execute if score @s terf_data_B matches ..10000 run scoreboard players add @s te
 
 #process visuals for this state
 scoreboard players set shield_status terf_states 4
-scoreboard players set stabilizer_rotation_duration terf_states 3
+scoreboard players add @s terf_data_V 500
 data modify storage terf:temp displays.group_main[].color set value "red"
 function terf:entity/machines/stfr/visuals/stabilizer/stabilizer_power_beam_tick
 function terf:entity/machines/stfr/visuals/stabilizer/rod_animation_step
