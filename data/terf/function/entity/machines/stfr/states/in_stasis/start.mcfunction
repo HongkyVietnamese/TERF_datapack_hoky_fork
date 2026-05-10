@@ -44,6 +44,7 @@ data modify storage terf:temp args.arg2 set from entity @s data.terf.machine_id
 function datapipes_lib:require/with_args/3 with storage terf:temp args
 
 kill @e[type=text_display,tag=terf_shutdown_failure_glow,distance=..1] 
-
+execute if score @s terf_data_A matches 17 run tag @s add terf_shutdown_fail_stasis
+execute if score @s terf_data_B matches 10001.. run scoreboard players set @s terf_data_B 10000
 scoreboard players set @s terf_data_E 0
 scoreboard players set @s terf_data_A 10
