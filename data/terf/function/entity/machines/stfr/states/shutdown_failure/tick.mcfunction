@@ -100,6 +100,8 @@ execute if score @s terf_data_E matches 760 run function terf:entity/machines/st
 execute if score @s terf_data_E matches 770 run function terf:entity/machines/stfr/stab_transform/open_trapdoors/stab_e with entity @s data.terf
 execute if score @s terf_data_E matches 785 run function terf:entity/machines/stfr/stab_transform/open_trapdoors/stab_n with entity @s data.terf
 execute if score @s terf_data_E matches 780 run function terf:entity/machines/stfr/stab_transform/open_trapdoors/stab_w with entity @s data.terf
+execute if score @s terf_data_E matches 790 run function terf:entity/machines/stfr/stab_transform/open_trapdoors/stab_u with entity @s data.terf
+execute if score @s terf_data_E matches 795 run function terf:entity/machines/stfr/stab_transform/open_trapdoors/stab_d with entity @s data.terf
 
 execute if score @s terf_data_E matches 1200 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.shut_fail.diameter',level:1,text:'{"text":"Core Diameter Decreasing Due To Extreme Shield Densities! ","color":"red"},{"text":"Core Spin Levels Rising Exponentially!","color":"gold"}'}
 

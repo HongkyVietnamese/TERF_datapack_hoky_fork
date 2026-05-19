@@ -1,5 +1,4 @@
 tag @s remove terf_stfr_surge_unabortable
-tag @s remove terf_startup_overload_stabilizing
 
 playsound minecraft:block.beacon.power_select ambient @a[distance=0..] ~ ~ ~ 20 0
 playsound minecraft:block.beacon.power_select ambient @a[distance=0..] ~ ~ ~ 20 0
@@ -11,7 +10,6 @@ playsound terf:charge_up.heavy_shutdown ambient @a[distance=0..] ~ ~ ~ 15 1
 playsound terf:charge_up.heavy_shutdown ambient @a[distance=0..] ~ ~ ~ 15 1
 playsound terf:charge_up.heavy_shutdown ambient @a[distance=0..] ~ ~ ~ 15 1
 
-scoreboard players set @s terf_data_A 3
 scoreboard players set @s terf_data_B 5000
 
 scoreboard objectives remove terf_shake_magnitude

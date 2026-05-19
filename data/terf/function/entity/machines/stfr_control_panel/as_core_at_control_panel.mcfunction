@@ -82,7 +82,7 @@ execute if score NETratetimer terf_states >= NETrate terf_states run function te
 execute if score @s terf_data_A matches 16 run return fail
 
 #startup overload text
-execute if score @s terf_data_A matches 12 if score @s terf_data_E matches 463.. run return run function terf:entity/machines/stfr_control_panel/startup_overload_screen
+execute if score @s terf_data_A matches 12 if score T2 terf_states matches 0 run playsound terf:alarms.beep master @a[distance=0..] ~ ~ ~ 1 2
 
 #self destruct text
 execute if score @s terf_data_A matches 15 if score @s terf_data_E matches ..199 run return run function terf:entity/machines/stfr_control_panel/no_signal_screen

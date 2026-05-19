@@ -9,6 +9,8 @@ execute if score @s terf_data_E matches 50 run function terf:entity/machines/stf
 execute if score @s terf_data_E matches 80 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_e with entity @s data.terf
 execute if score @s terf_data_E matches 65 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_n with entity @s data.terf
 execute if score @s terf_data_E matches 75 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_w with entity @s data.terf
+execute if score @s terf_data_E matches 79 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_u with entity @s data.terf
+execute if score @s terf_data_E matches 85 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_d with entity @s data.terf
 
 #automatic abortion system
 #execute if score @s terf_data_E matches 29 run function terf:entity/machines/stfr/states/startup_confirmed/abort_no_fuel
