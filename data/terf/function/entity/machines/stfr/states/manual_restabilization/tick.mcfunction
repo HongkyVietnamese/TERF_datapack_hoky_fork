@@ -234,6 +234,15 @@ execute if score @s[tag=terf_key_on,tag=terf_sstb_on] terf_data_Ab matches 4 if 
 
 execute if score @s terf_data_Ab matches 5 run execute if score @s terf_data_B matches ..10000 run scoreboard players add @s terf_data_B 900
 execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 600.. run function terf:entity/machines/stfr/states/manual_restabilization/restabilize
+
+#close stabilizer maintenance trapdoors
+execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 325 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_s with entity @s data.terf
+execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 336 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_e with entity @s data.terf
+execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 342 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_n with entity @s data.terf
+execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 335 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_w with entity @s data.terf
+execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 345 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_u with entity @s data.terf
+execute if score @s terf_data_Ab matches 5 if score @s terf_data_U matches 347 run function terf:entity/machines/stfr/stab_transform/close_trapdoors/stab_d with entity @s data.terf
+
 $execute if score @s terf_data_Ab matches 5 run kill @e[type=item_display,tag=terf_stfr_shield_explosion,tag=terf_related_$(machine_id),distance=..1]
 
 execute if score @s terf_data_E matches 1300 run function terf:entity/machines/stfr/broadcast {bcd:"return 1",voiceline:'stfr.manual_restab.fail_in_2m',level:2,text:'{"text":"Time Until Auxilary Shield Failure: T-2 minutes","color":"yellow"}'}
