@@ -16,5 +16,4 @@ scoreboard players add @s terf_data_X 2
 scoreboard players add @s terf_data_Y 1
 scoreboard players add @s terf_data_Z 2
 
-execute if score temp terf_states matches ..-1 run scoreboard players set temp terf_states 0
 execute store result entity @s text_opacity byte 0.5 run scoreboard players get temp terf_states
