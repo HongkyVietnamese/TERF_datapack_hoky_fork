@@ -1,1 +1,1 @@
-$execute store result score error terf_states run function $(changetype) with storage terf:temp temp[0]
+$execute store result score error terf_states as $(uuid) at @s run function $(changetype) with storage terf:temp temp

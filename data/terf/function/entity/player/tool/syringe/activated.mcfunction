@@ -10,13 +10,15 @@ execute if predicate datapipes_lib:pressing_sprint run scoreboard players set tr
 item replace entity 0010ccd2-0010-cd37-0010-cd360010c8e1 container.0 from entity @s weapon
 
 #run stuff
+execute as @e[type=marker,tag=terf_multiblockcore,distance=..256] run function terf:entity/machines/multiblock_core_show_tanks
 scoreboard players set error terf_states 0
-execute store result score terminated terf_states run attribute @s minecraft:block_interaction_range base get 5
+execute store result score terminated terf_states run attribute @s block_interaction_range get 5
 function terf:entity/player/tool/syringe/raycast
+kill @e[tag=terf_multiblock_tank]
 
 function terf:entity/player/tool/syringe/set_name
 
-execute unless score error terf_states matches 0 run return run title @p[tag=terf_currententity] actionbar {"text":"This tank is currently locked!","color":"yellow"}
+execute unless score error terf_states matches 0 run return run title @s actionbar {"text":"This tank is currently inaccessible!","color":"yellow"}
 
 #save item back into the players hand
 item replace entity @s weapon from entity 0010ccd2-0010-cd37-0010-cd360010c8e1 container.0
@@ -25,12 +27,12 @@ item replace entity @s weapon from entity 0010ccd2-0010-cd37-0010-cd360010c8e1 c
 execute if entity @s[tag=!terf_full_hazmat] run return fail
 
 #load data
-data modify storage terf:temp syringe_tanks set value [{id:"terf.oxygen",amount:0,max:1000}]
-execute store result storage terf:temp syringe_tanks[0].amount int 1 run scoreboard players get @s terf_data_O
+data modify storage terf:temp syringe_tank set value {id:"terf.oxygen",amount:0,max:1000}
+execute store result storage terf:temp syringe_tank.amount int 1 run scoreboard players get @s terf_data_O
 function terf:entity/player/tool/syringe/insert_fluid
 function terf:entity/player/tool/syringe/set_name
 
-execute store result score @s terf_data_O run data get storage terf:temp syringe_tanks[0].amount
+execute store result score @s terf_data_O run data get storage terf:temp syringe_tank.amount
 item replace entity @s weapon from entity 0010ccd2-0010-cd37-0010-cd360010c8e1 container.0
 
-playsound minecraft:entity.puffer_fish.blow_out player @a[distance=0..] ~ ~ ~ 1 0
+playsound entity.puffer_fish.blow_out player @a[distance=0..] ~ ~ ~ 1 0
