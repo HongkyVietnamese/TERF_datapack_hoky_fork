@@ -1,2 +1,3 @@
 # Project exclude paths
 /*.zip
+/*.DS_Store
